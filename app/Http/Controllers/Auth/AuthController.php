@@ -10,6 +10,11 @@ use Illuminate\Foundation\Auth\AuthenticatesAndRegistersUsers;
 
 class AuthController extends Controller
 {
+
+    protected $loginPath = '/login';
+    protected $redirectPath = '/';
+    protected $redirectTo = '/';
+
     /*
     |--------------------------------------------------------------------------
     | Registration & Login Controller
