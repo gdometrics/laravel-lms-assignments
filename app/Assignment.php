@@ -8,6 +8,7 @@ class Assignment extends Model
 {
     protected $fillable = [
         'name',
+        'description',
         'module_id'
     ];
 

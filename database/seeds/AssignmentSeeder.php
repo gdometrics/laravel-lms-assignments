@@ -37,7 +37,7 @@ class AssignmentSeeder extends Seeder
 
         Assignment::create([
             'name' => 'Assignment Three',
-            'description' => $faker->paragraph(4),z
+            'description' => $faker->paragraph(4),
             'module_id' => 2,
             'created_at' => Carbon::now(),
             'updated_at' => Carbon::now()

@@ -126,4 +126,27 @@ class PagesController extends Controller
         $assignments = Assignment::all();
         return view('pages.assignments', compact('assignments'));
     }
+
+    public function newAssignment()
+    {
+        $modules = Module::lists('name', 'id')->all();
+        return view('pages.newAssignment', compact('modules'));
+    }
+
+    public function newModule()
+    {
+        return view('pages.newModule');
+    }
+
+    public function saveModule(Request $request)
+    {
+        Module::create($request->all());
+        return redirect('/modules');
+    }
+
+    public function saveAssignment(Request $request)
+    {
+        Assignment::create($request->all());
+        return redirect('/assignments');
+    }
 }

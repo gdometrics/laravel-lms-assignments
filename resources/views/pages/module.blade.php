@@ -11,7 +11,7 @@
     <ul class="list-group">
         @foreach($module->assignments as $assignment)
             <li class="list-group-item">
-                <a href="assignment/{{ $assignment->id }}">
+                <a href="/assignment/{{ $assignment->id }}">
                     {{ $assignment->name }}
                 </a>
             </li>

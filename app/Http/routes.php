@@ -23,12 +23,21 @@ Route::post('auth/register', 'Auth\AuthController@postRegister');
 
 Route::resource('/', 'PagesController');
 
+Route::post('/module/save', 'PagesController@saveModule');
+
+Route::get('/module/new', 'PagesController@newModule');
+
 Route::get('/modules', 'PagesController@modules');
 
 Route::get('/module/{id}', 'PagesController@module');
 
+Route::post('/assignment/save', 'PagesController@saveAssignment');
+
+Route::get('/assignment/new', 'PagesController@newAssignment');
+
 Route::get('/assignments', 'PagesController@assignments');
 
 Route::get('/assignment/{id}', 'PagesController@assignment');
+
 
 
