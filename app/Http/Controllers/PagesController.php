@@ -2,9 +2,14 @@
 
 namespace App\Http\Controllers;
 
+
 use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+
+use App\Module;
+use App\Assignment;
+
 
 class PagesController extends Controller
 {
@@ -88,5 +93,37 @@ class PagesController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    public function module($id)
+    {
+        $module = Module::find($id);
+        return view('pages.module', compact('module'));
+    }
+
+    public function assignment($id)
+    {
+        $assignment = Assignment::find($id);
+        return view('pages.assignment', compact('assignment'));
+    }
+
+        /**
+     * Loads modules view
+     * @return \Illuminate\View\View
+     */
+    public function modules()
+    {
+        $modules = Module::all();
+        return view('pages.modules', compact('modules'));
+    }
+
+    /**
+     * Loads assignments view
+     * @return \Illuminate\View\View
+     */
+    public function assignments()
+    {
+        $assignments = Assignment::all();
+        return view('pages.assignments', compact('assignments'));
     }
 }

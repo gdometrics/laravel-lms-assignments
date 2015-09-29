@@ -8,6 +8,9 @@
 </head>
 <body>
     <div class="container">
+
+        @include('layouts.partials.nav')
+
         @yield('content')
     </div>
     <script src="{{ elixir('js/app.js') }}"></script>
